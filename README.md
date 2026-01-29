@@ -33,15 +33,58 @@ git clone https://github.com/Jnaneswari19/gemini-rag.git
 cd gemini-rag
 ```
 
-### 2. Install dependencies
+You should place that updated installation block **inside your README.md**, replacing the old “Install dependencies” section. Right now, your README shows both the new block and the old step `### 3. Run the server` duplicated — so here’s how to tidy it up:
+
+---
+
+### 📑 Correct Placement
+
+1. Keep the **Setup section** like this:
+
+```markdown
+## ⚙️ Setup
+
+### 1. Clone the repo
 ```bash
-pip install fastapi uvicorn sentence-transformers faiss-cpu pytest
+git clone https://github.com/Jnaneswari19/gemini-rag.git
+cd gemini-rag
 ```
+
+### 2. Install dependencies
+You can install dependencies in two ways:
+
+#### ✅ Option 1: One-Step Install (Recommended)
+Use the root-level `requirements.txt` to install everything at once:
+```bash
+pip install -r requirements.txt
+```
+This includes both backend and frontend dependencies.
+
+#### ⚙️ Option 2: Install Separately
+
+##### Backend
+```bash
+cd backend
+pip install -r requirements.txt
+```
+
+##### Frontend
+```bash
+cd frontend
+pip install -r requirements.txt
+```
+
+---
 
 ### 3. Run the server
 ```bash
 uvicorn main:app --reload --host 0.0.0.0 --port 8000
 ```
+```
+
+2. Remove the **extra duplicate “Run the server” block** that appears after your “Manual Run” section. That way, you don’t confuse evaluators with two different “Run the server” steps.
+
+---
 
 ---
 
