@@ -1,0 +1,10 @@
+# Backend dependencies
+fastapi
+uvicorn
+sentence-transformers
+faiss-cpu
+pytest
+
+# Frontend dependencies
+streamlit
+requests
